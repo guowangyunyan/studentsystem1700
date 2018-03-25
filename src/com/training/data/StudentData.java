@@ -1,25 +1,15 @@
-package com.training.model;
+package com.training.data;
 
 import java.util.Date;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
-
-@Entity
-@Table(name = "student")
-public class StudentModel {
+public class StudentData {
 	private Integer id;
-	private String name;// 姓名
-	private String clazz;// 班级
-	private Date birthday;// 出生日期
-	private Date createTime;// 建表时间
-	private Date modifyTime;// 修改时间
-	private boolean available;// 是否有用
+	private String name;
+	private String clazz;
+	private Date birthday;
+	private Date createTime;
+	private Date modifyTime;
 
-	@Id
-	@GeneratedValue
 	public Integer getId() {
 		return id;
 	}
@@ -66,14 +56,6 @@ public class StudentModel {
 
 	public void setModifyTime(Date modifyTime) {
 		this.modifyTime = modifyTime;
-	}
-
-	public boolean isAvailable() {
-		return available;
-	}
-
-	public void setAvailable(boolean available) {
-		this.available = available;
 	}
 
 }

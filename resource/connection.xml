@@ -65,6 +65,14 @@
 		<aop:advisor advice-ref="txAdvice" pointcut-ref="txPointcut" />
 	</aop:config>
 	
+	<bean id="commonDao" class="com.training.common.dao.CommonDao">
+		<property name="sessionFactory" ref="mySessionFactory"/>
+		<property name="jdbcTemplate" ref="jdbcTemplate"/>
+	</bean>
+	
+	<bean id="commonService" class="com.training.common.service.CommonService">
+		<property name="commonDao" ref="commonDao"/>
+	</bean>
 	
 
 </beans>

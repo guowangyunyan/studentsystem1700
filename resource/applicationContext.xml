@@ -9,9 +9,13 @@
 
 	<import resource="classpath:connection.xml" />
 
-
+	<bean id="studentService" class="com.training.service.impl.StudentServiceImpl">
+		<property name="commonService" ref="commonService"></property>
+		<property name="studentModelConvert" ref="studentModelConvert"></property>
 	
+	</bean>
 	
+	<bean id="studentModelConvert" class="com.training.convert.StudentModelConvert"></bean>
 
 
 	
