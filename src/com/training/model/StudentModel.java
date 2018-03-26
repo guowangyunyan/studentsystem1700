@@ -10,6 +10,8 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "student")
 public class StudentModel {
+	public static final String NAME = "name";
+	public static final String CLASS = "clazz";
 	private Integer id;
 	private String name;// 姓名
 	private String clazz;// 班级

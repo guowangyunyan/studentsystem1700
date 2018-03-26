@@ -13,10 +13,18 @@
 		<property name="commonService" ref="commonService"></property>
 		<property name="studentModelConvert" ref="studentModelConvert"></property>
 	
+		<property name="studentDao" ref="studentDao"></property>
+		<property name="studentDataConvert" ref="studentDataConvert"></property>
 	</bean>
 	
 	<bean id="studentModelConvert" class="com.training.convert.StudentModelConvert"></bean>
-
-
+	<bean id="studentDataConvert" class="com.training.convert.StudentDataConvert"></bean>
+	<bean id="studentDao" class="com.training.dao.impl.StudentDaoImpl">
+	<property name="commonDao" ref="commonDao"></property>
+	</bean>
+	
+	<bean id="userValidator" class="com.training.validator.UserValidator"></bean>
+	
+	<bean id="userService" class="com.training.service.impl.UserServiceImpl"></bean>
 	
 </beans>
